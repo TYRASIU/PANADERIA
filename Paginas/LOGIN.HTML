@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INICIO DE SESION</title>
+    <link rel="stylesheet" href="LOGIN.CSS">
+
+    <script>
+		function validarLogin() {
+			// Obtenemos los valores de usuario y contraseña
+			var usuario = document.getElementById("usuario").value;
+			var contraseña = document.getElementById("contraseña").value;
+			// Verificamos si son válidos
+			if(usuario === "Reynaldo" && contraseña === "58586287") {
+				// Si son válidos, redirigimos al usuario al hipervínculo
+				window.location.href = "INDEX.html";
+			} else {
+				// Si no son válidos, mostramos un mensaje de error
+				alert("Usuario o Contraseña incorrectas. Intente de nuevo.");
+			}
+		}
+	</script>
+</head>
+<body>
+    <div class="container">
+        <div class="info">
+            <p class="txt-1"> Tecnologico Nacional de Mexico </p>
+            <p class="txt-1"> Campus Zona Olmeca </p>
+            <h2>Simulacion de Produccion y Ganancia de una Panaderia</h2> 
+            <p class="txt-2"></p>
+        </div>
+        <form class="form">
+            <h2>Inicio de sesión</h2>
+            <p>Programación Web</p>
+            <div class="inputs">
+                <label for="usuario">Usuario:</label>
+                <input type="text" id="usuario" class="box" placeholder="Ingresa tu usuario">
+                <label for="contraseña">Contraseña:</label>
+                <input type="password" id="contraseña" class="box" placeholder="Ingresa tu contraseña">
+                <input type="button" value="Ingresar" onclick="validarLogin()">
+            </div>
+            <a href="#">¿Olvidaste tu contraseña?</a>
+            <input type="button" value="Iniciar" class="submit" onclick="validarLogin()">
+        </form>
+    </div>
+</body>
+</html>
